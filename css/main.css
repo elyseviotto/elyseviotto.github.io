@@ -1,0 +1,600 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Montserrat);*/
+
+@font-face {
+    font-family: 'libre_baskerville-bold';
+    src: url('webfonts/librebaskerville-bold-webfont.eot');
+    src: url('webfonts/librebaskerville-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/librebaskerville-bold-webfont.woff2') format('woff2'),
+         url('webfonts/librebaskerville-bold-webfont.woff') format('woff'),
+         url('webfonts/librebaskerville-bold-webfont.ttf') format('truetype'),
+         url('webfonts/librebaskerville-bold-webfont.svg#libre_baskervillebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libre_baskerville-italic';
+    src: url('webfonts/librebaskerville-italic-webfont.eot');
+    src: url('webfonts/librebaskerville-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/librebaskerville-italic-webfont.woff2') format('woff2'),
+         url('webfonts/librebaskerville-italic-webfont.woff') format('woff'),
+         url('webfonts/librebaskerville-italic-webfont.ttf') format('truetype'),
+         url('webfonts/librebaskerville-italic-webfont.svg#libre_baskervilleitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libre_baskerville-regular';
+    src: url('webfonts/librebaskerville-regular-webfont.eot');
+    src: url('webfonts/librebaskerville-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/librebaskerville-regular-webfont.woff2') format('woff2'),
+         url('webfonts/librebaskerville-regular-webfont.woff') format('woff'),
+         url('webfonts/librebaskerville-regular-webfont.ttf') format('truetype'),
+         url('webfonts/librebaskerville-regular-webfont.svg#libre_baskervilleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('webfonts/montserrat-bold-webfont.eot');
+    src: url('webfonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('webfonts/montserrat-bold-webfont.woff') format('woff'),
+         url('webfonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('webfonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('webfonts/montserrat-regular-webfont.eot');
+    src: url('webfonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('webfonts/montserrat-regular-webfont.woff') format('woff'),
+         url('webfonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('webfonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Montserrat-light';
+    src: url('webfonts/montserrat-light-webfont.eot');
+    src: url('webfonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('webfonts/montserrat-light-webfont.woff') format('woff'),
+         url('webfonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('webfonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: 'Montserrat', arial, sans-serif;
+  background-color: #00bbdd;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Grid system
+   ========================================================================== */
+
+.container {
+  padding: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .grid__cell {
+  flex-grow: 1;
+}
+
+.overlaid {
+  position: relative;
+}
+
+.overlaid__item {
+
+}
+.overlaid__item--topright {
+-webkit-transform: translate(5%, 23%);
+    -ms-transform: translate(5%, 23%);
+        transform: translate(5%, 23%);
+}
+
+
+/* ==========================================================================
+   Specific stuff
+   ========================================================================== */
+
+.hero__logo {
+  width: 300px;
+  height: auto;
+}
+.hero__logo.parallax1, .hero__logo.parallax2  {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  color: #444;
+  padding: 70px;
+}
+
+.pricing {
+  vertical-align: middle;
+  color: #00bbdd;
+  margin: 0 10px 10px 0;
+  border-bottom: 1px solid #00bbdd;
+}
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+
+  .introduction {
+    margin-top: 40px;
+  }
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3 {
+  font-family: 'libre_baskerville-regular', serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  margin-top: 0;
+  line-height: 2em;
+}
+
+a.btn {
+  text-decoration: none;
+  color: #00bbdd;
+  border: 2px solid #00bbdd;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+.type--dark {
+  color: #444;
+}
+.type--xl {
+  font-size: 2.5em;
+  line-height: 1.325em;
+}
+
+.type--large {
+  font-size: 2em;
+}
+
+.type--medium {
+  font-size: 1.5em;
+}
+
+.type--normal {
+  font-size: 1em;
+}
+
+.type--small {
+  font-size: 0.875em;
+}
+
+.type--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.type--italic {
+  font-style: italic;
+}
+
+.type--center {
+  text-align: center;
+}
+
+.type--margin-half {
+  margin-bottom: 1.5em;
+}
+
+.serif {
+  font-family: 'libre_baskerville-regular', serif !important;
+}
+.serif--bold {
+  font-family: 'libre_baskerville-bold', serif !important;
+}
+.serif--italic {
+  font-family: 'libre_baskerville-italic', serif !important;
+}
+
+.sans-serif {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.sans-serif--light {
+  font-family: 'Montserrat-light', sans-serif !important;
+}
+.sans-serif--bold {
+  font-family: 'Montserrat-bold', sans-serif !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+
+  .container {
+    padding: 20px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .grid--center {
+    justify-content: center;
+  }
+
+  .grid--end {
+    justify-content: flex-end;
+  }
+
+  .grid .grid__cell {
+    flex-grow: 1;
+  }
+
+  .grid .grid__cell.grid__cell--three-quarter {
+    flex-basis: 75%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .grid .grid__cell.grid__cell--half {
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .grid .grid__cell.grid__cell--quarter {
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .grid .grid__cell.grid__cell--no-flex {
+    flex-grow: 0;
+  }
+
+  .overlaid {
+    position: relative;
+  }
+
+  .overlaid__item {
+    position: absolute;
+    max-width: auto;
+  }
+  .overlaid__item--topright {
+ -webkit-transform: translate(30%, 10%);
+      -ms-transform: translate(30%, 10%);
+          transform: translate(30%, 10%);
+  }
+
+  .parallax-container {
+    position: relative;
+    width: 100;
+    max-width: 100%;
+  }
+
+  .hero.parallax-container {
+    height: 300px;
+    width: 300px;
+  }
+
+  .parallax {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+  }
+
+  .hero__logo.parallax {
+    width: 300px;
+    display: inherit;
+  }
+
+  .event-info.parallax-container {
+    height: 80px;
+    width: 500px;
+  }
+  .event-info .parallax {
+    width: 500px;
+  }
+
+  .event-info .parallax:last-child {
+    margin-top: 40px;
+  }
+
+  .parallax1 {
+    opacity: 0.3;
+  }
+  .parallax2 {
+    opacity: 0.1;
+  }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
