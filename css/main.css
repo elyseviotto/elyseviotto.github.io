@@ -124,6 +124,19 @@ hr {
     padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a.inverted {
+  color: #fff;
+}
+
+a.inverted:hover {
+  border-bottom: 1px solid #fff;
+  transition: 0.3s opacity linear;
+}
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -217,10 +230,17 @@ textarea {
   padding: 70px;
 }
 
+.mc-email {
+  margin-top: 40px;
+}
 .pricing {
   vertical-align: middle;
   color: #00bbdd;
   margin: 0 10px 10px 0;
+}
+
+footer {
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 35em) {
@@ -256,7 +276,7 @@ p {
   line-height: 2em;
 }
 
-a.btn {
+a.btn, button.btn, input.btn {
   text-decoration: none;
   color: #00bbdd;
   border: 2px solid #00bbdd;
@@ -266,6 +286,19 @@ a.btn {
   padding: 15px 30px;
   display: inline-block;
   margin-top: 20px;
+}
+
+input  {
+  color: #00bbdd;
+  border: 2px solid #00bbdd;
+  background: transparent;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+input[type=email] {
+  margin-right: 10px;
 }
 
 /* ==========================================================================
@@ -312,6 +345,10 @@ a.btn {
   text-align: center;
 }
 
+.type--right {
+  text-align: right;
+}
+
 .type--margin-half {
   margin-bottom: 1.5em;
 }
@@ -338,6 +375,10 @@ a.btn {
 
 .hidden {
   display: none !important;
+}
+
+.display--block {
+  display: block;
 }
 
 /*
@@ -411,16 +452,19 @@ a.btn {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 45em) {
   /* Style adjustments for viewports that meet the condition */
 
   .container {
     padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 
   .grid {
     display: flex;
     flex-direction: row;
+
   }
 
   .grid--center {
