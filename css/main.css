@@ -126,16 +126,25 @@ hr {
 
 a {
   text-decoration: none;
+  border: 1px solid transparent;
+}
+a:hover {
+  transition: 0.3s all linear;
+  -moz-transition: 0.3s all linear;
+  -webkit-transition: 0.3s all linear;
 }
 
 a.inverted {
   color: #fff;
+  color: rgba(255,255,255,0.8);
 }
-
 a.inverted:hover {
+  color: #fff;
+  color: rgba(255,255,255,1);
+  opacity: 1;
   border-bottom: 1px solid #fff;
-  transition: 0.3s opacity linear;
 }
+a
 
 /*
  * Remove the gap between audio, canvas, iframes,
