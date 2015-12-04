@@ -506,6 +506,12 @@ input[type=email] {
     flex-shrink: 0;
   }
 
+  .grid .grid__cell.grid__cell--quarter.fr-headline {
+    flex-basis: 27%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
   .grid .grid__cell.grid__cell--no-flex {
     flex-grow: 0;
   }
