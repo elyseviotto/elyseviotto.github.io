@@ -562,7 +562,7 @@ input[type=email] {
   }
 
   .event-info .parallax:last-child {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   .parallax1 {
