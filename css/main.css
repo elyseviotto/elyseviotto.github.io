@@ -197,6 +197,9 @@ textarea {
 .container {
   padding: 20px;
 }
+.container.container--no-padding {
+  padding: 0;
+}
 
 .grid {
   display: flex;
@@ -228,6 +231,7 @@ textarea {
 .hero__logo {
   width: 300px;
   height: auto;
+  margin-bottom: 50px;
 }
 .hero__logo.parallax1, .hero__logo.parallax2  {
   display: none;
@@ -236,16 +240,47 @@ textarea {
 .card {
   background: #fff;
   color: #444;
-  padding: 70px;
+  padding: 50px 30px 30px 30px;
 }
 
 .mc-email {
   margin-top: 40px;
 }
+
 .pricing {
   vertical-align: middle;
   color: #00bbdd;
   margin: 0 10px 10px 0;
+}
+
+.section--fullwidth-band {
+  background: url(../assets/img/marble-pattern-blue.png) repeat;
+  /*background-color: #ffc1d5;*/
+  padding: 100px 50px;
+  margin: 100px 0;
+}
+
+.section--margin-bottom {
+  margin-bottom: 100px;
+}
+
+.table--schedule {
+  width: 100%;
+}
+.table--schedule tr {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.table--schedule td {
+  padding: 10px 0;
+}
+.table--schedule tr > td:first-child {
+  width: 120px;
+  text-align: center;
+}
+
+.table--schedule tr > td:last-of-type {
+  color: #444;
 }
 
 footer {
@@ -255,8 +290,12 @@ footer {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 
-  .introduction {
-    margin-top: 40px;
+  .card {
+    padding: 70px;
+  }
+
+  .table--schedule tr > td:first-child {
+    width: 200px;
   }
 }
 
@@ -266,6 +305,8 @@ footer {
 
 h1, h2, h3 {
   font-family: 'libre_baskerville-regular', serif;
+  font-weight: normal;
+  margin: 0;
 }
 
 h1 {
@@ -282,7 +323,7 @@ h4 {
 
 p {
   margin-top: 0;
-  line-height: 2em;
+  line-height: auto;
 }
 
 a.btn, button.btn, input.btn {
@@ -307,7 +348,24 @@ input  {
 }
 
 input[type=email] {
-  margin-right: 10px;
+  width: calc(100% - 30px);
+}
+
+.type--number {
+  display: inline-block;
+  background: rgba(255,78,157,0.8);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff4e9d+0,dd13cd+100 */
+  background: #ff4e9d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ff4e9d 0%, #dd13cd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ff4e9d 0%,#dd13cd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ff4e9d 0%,#dd13cd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e9d', endColorstr='#dd13cd',GradientType=0 ); /* IE6-9 */
+ /* text-shadow: 2px 2px rgba(0,0,0,0.3);*/
+  width: 40px;
+  border-radius: 20px;
+  padding: 6px 0;
+  text-align: center;
+  box-shadow: 10px 10px rgba(0,0,0,0.3);
 }
 
 /* ==========================================================================
@@ -317,11 +375,20 @@ input[type=email] {
 /*
  * Hide visually and from screen readers:
  */
+
+.type--margin-full {
+  margin-bottom: 20px;
+}
+
+.type--margin-triple {
+  margin-bottom: 60px;
+}
+
 .type--dark {
   color: #444;
 }
 .type--xl {
-  font-size: 2.5em;
+  font-size: 40px;
   line-height: 1.325em;
 }
 
@@ -330,15 +397,15 @@ input[type=email] {
 }
 
 .type--medium {
-  font-size: 1.5em;
+  font-size: 24px;
 }
 
 .type--normal {
-  font-size: 1em;
+  font-size: 16px;
 }
 
 .type--small {
-  font-size: 0.875em;
+  font-size: 14px;
 }
 
 .type--uppercase {
@@ -364,6 +431,7 @@ input[type=email] {
 
 .serif {
   font-family: 'libre_baskerville-regular', serif !important;
+  font-weight: normal;
 }
 .serif--bold {
   font-family: 'libre_baskerville-bold', serif !important;
@@ -473,7 +541,7 @@ input[type=email] {
   .grid {
     display: flex;
     flex-direction: row;
-
+    box-sizing: border-box;
   }
 
   .grid--center {
@@ -485,8 +553,24 @@ input[type=email] {
   }
 
   .grid .grid__cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
     flex-grow: 1;
+    padding: 10px;
   }
+
+  .grid--triple-padding {
+    width: 100%;
+  }
+
+  .grid--triple-padding > .grid__cell {
+   padding: 0 30px;
+  }
+
+  .grid--triple-padding > .grid__cell:first-of-type { padding-left: 0; }
+  .grid--triple-padding > .grid__cell:last-of-type { padding-right: 0; }
 
   .grid .grid__cell.grid__cell--three-quarter {
     flex-basis: 75%;
@@ -513,7 +597,7 @@ input[type=email] {
   }
 
   .grid .grid__cell.grid__cell--no-flex {
-    flex-grow: 0;
+    flex: 0 0 auto;
   }
 
   .overlaid {
