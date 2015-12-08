@@ -210,6 +210,10 @@ textarea {
   flex-grow: 1;
 }
 
+.grid.grid--triple-padding > .grid__cell {
+ padding: 30px 0;
+}
+
 .overlaid {
   position: relative;
 }
@@ -520,8 +524,9 @@ input[type=email] {
     clear: both;
 }
 
+@media only screen and (min-width: 45em) {
 
-
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -561,11 +566,11 @@ input[type=email] {
     padding: 10px;
   }
 
-  .grid--triple-padding {
+  .grid.grid--triple-padding {
     width: 100%;
   }
 
-  .grid--triple-padding > .grid__cell {
+  .grid.grid--triple-padding > .grid__cell {
    padding: 0 30px;
   }
 
