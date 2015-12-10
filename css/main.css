@@ -103,6 +103,10 @@ fieldset {
 textarea {
   resize: vertical; }
 
+address {
+  font-style: normal;
+  line-height: 24px; }
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -154,9 +158,6 @@ textarea {
   color: #444;
   padding: 40px 30px 30px; }
 
-.mc-email {
-  margin-top: 40px; }
-
 .pricing {
   vertical-align: middle;
   color: #00bbdd;
@@ -175,7 +176,7 @@ textarea {
   .table--schedule tr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
   .table--schedule td {
-    padding: 10px 0;
+    padding: 20px 0;
     vertical-align: top; }
   .table--schedule tr > td:first-child {
     width: 120px;
@@ -233,7 +234,8 @@ input {
   margin-top: 20px; }
 
 input[type=email] {
-  width: calc(100% - 60px); }
+  width: -webkit-calc(100% - 60px) !important;
+  width: calc(100% - 60px) !important; }
 
 .type--number {
   display: inline-block;

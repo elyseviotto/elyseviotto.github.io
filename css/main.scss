@@ -30,6 +30,12 @@ $spacing--xlarge: 100px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression}) !important;
+  #{$property}: calc(#{$expression}) !important;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -168,6 +174,11 @@ textarea {
   resize: vertical;
 }
 
+address {
+  font-style: normal;
+  line-height: 24px;
+}
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -238,10 +249,6 @@ textarea {
   padding: $spacing--double ($spacing + $spacing--half) ($spacing + $spacing--half);
 }
 
-.mc-email {
-  margin-top: $spacing--double;
-}
-
 .pricing {
   vertical-align: middle;
   color: #00bbdd;
@@ -265,7 +272,7 @@ textarea {
     border-bottom: 1px solid rgba(255,255,255,0.3);
   }
   td {
-  padding: 10px 0;
+  padding: $spacing 0;
   vertical-align: top;
   }
 
@@ -343,7 +350,7 @@ input  {
 }
 
 input[type=email] {
-  width: calc(100% - #{ $spacing--double + $spacing });
+  @include calc(width, 100% - #{($spacing--double + $spacing)} )
 }
 
 .type--number {
