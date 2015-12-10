@@ -287,6 +287,9 @@ input[type=email] {
 .type--small {
   font-size: 14px; }
 
+.type--display {
+  font-family: "kepler-std-display", serif; }
+
 .type--uppercase {
   text-transform: uppercase;
   letter-spacing: 2px; }
