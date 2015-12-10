@@ -1,0 +1,28 @@
+
+.parashadow {
+  display:block;
+  position:relative;
+  width:360px;
+  height:407px;
+  margin:-40px 0 0 0;
+
+}
+.parashadow:first-child {
+  width:440px;
+  height:361px;
+  margin:0 -160px 0 0;
+}
+.parashadow .level {
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.parashadow.enhanced,
+.parashadow.enhanced:first-child {
+  background:none;
+}

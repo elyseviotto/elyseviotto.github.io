@@ -403,6 +403,9 @@ input[type=email] {
   font-size: 14px;
 }
 
+.type--display {
+  font-family: $type--display;
+}
 .type--uppercase {
   @include type--uppercase;
 }
