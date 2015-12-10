@@ -1,40 +1,84 @@
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 /* ==========================================================================
    Variables
    ========================================================================== */
+
+$type--serif: 'kepler-std-display', serif;
+$type--sans-serif: Montserrat;
+$color: #444;
+
+$color--inverted: #fff;
+$color--inverted--light: rgba(255,255,255,0.8);
+
+$brand--primary: #00bbdd;
+$brand--primary--darker: #005677;
+
+$spacing: 20px;
+$spacing--half: 10px;
+$spacing--double: 40px;
+$spacing--xlarge: 100px;
+
+@mixin type--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Montserrat);
+
 @font-face {
   font-family: 'Montserrat-bold';
-  src: url("webfonts/montserrat-bold-webfont.eot");
-  src: url("webfonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/montserrat-bold-webfont.woff2") format("woff2"), url("webfonts/montserrat-bold-webfont.woff") format("woff"), url("webfonts/montserrat-bold-webfont.ttf") format("truetype"), url("webfonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  src: url('webfonts/montserrat-bold-webfont.eot');
+  src: url('webfonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/montserrat-bold-webfont.woff2') format('woff2'),
+  url('webfonts/montserrat-bold-webfont.woff') format('woff'),
+  url('webfonts/montserrat-bold-webfont.ttf') format('truetype'),
+  url('webfonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'Montserrat';
-  src: url("webfonts/montserrat-regular-webfont.eot");
-  src: url("webfonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/montserrat-regular-webfont.woff2") format("woff2"), url("webfonts/montserrat-regular-webfont.woff") format("woff"), url("webfonts/montserrat-regular-webfont.ttf") format("truetype"), url("webfonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  src: url('webfonts/montserrat-regular-webfont.eot');
+  src: url('webfonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/montserrat-regular-webfont.woff2') format('woff2'),
+  url('webfonts/montserrat-regular-webfont.woff') format('woff'),
+  url('webfonts/montserrat-regular-webfont.ttf') format('truetype'),
+  url('webfonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+
+}
+
 @font-face {
   font-family: 'Montserrat-light';
-  src: url("webfonts/montserrat-light-webfont.eot");
-  src: url("webfonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/montserrat-light-webfont.woff2") format("woff2"), url("webfonts/montserrat-light-webfont.woff") format("woff"), url("webfonts/montserrat-light-webfont.ttf") format("truetype"), url("webfonts/montserrat-light-webfont.svg#montserratlight") format("svg");
+  src: url('webfonts/montserrat-light-webfont.eot');
+  src: url('webfonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/montserrat-light-webfont.woff2') format('woff2'),
+  url('webfonts/montserrat-light-webfont.woff') format('woff'),
+  url('webfonts/montserrat-light-webfont.ttf') format('truetype'),
+  url('webfonts/montserrat-light-webfont.svg#montserratlight') format('svg');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
+
 html {
-  color: #fff;
+  color: $color--inverted;
   font-size: 1em;
   line-height: 1.4;
-  font-family: Montserrat, arial, sans-serif;
-  background-color: #00bbdd; }
+  font-family: $type--sans-serif, arial, sans-serif;
+  background-color: $brand--primary;
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -43,322 +87,407 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+
 ::-moz-selection {
   background: #b3d4fc;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 ::selection {
   background: #b3d4fc;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*
  * A better looking default horizontal rule
  */
+
 hr {
   display: block;
   height: 1px;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+  }
 
 a {
   text-decoration: none;
-  border: 1px solid transparent; }
+  border: 1px solid transparent;
+}
 
 a:hover {
   transition: 0.3s all linear;
   -moz-transition: 0.3s all linear;
-  -webkit-transition: 0.3s all linear; }
+  -webkit-transition: 0.3s all linear;
+}
 
 a.inverted {
-  color: rgba(255, 255, 255, 0.8); }
-
+  color: $color--inverted--light;
+}
 a.inverted:hover {
-  color: #fff;
-  color: white;
+  color: $color--inverted;
+  color: rgba(255,255,255,1);
   opacity: 1;
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid $color--inverted;
+}
 
 a
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
 audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /*
  * Remove default fieldset styles.
  */
+
 fieldset {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /*
  * Allow only vertical resizing of textareas.
  */
+
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
+  padding: 0.2em 0;
+}
 
 /* ==========================================================================
    Grid system
    ========================================================================== */
+
 .container {
-  padding: 20px; }
+  padding: $spacing;
+}
 
 .container.container--no-padding {
-  padding: 0; }
+  padding: 0;
+}
 
 .grid {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .grid .grid__cell {
-  flex-grow: 1; }
+  flex-grow: 1;
+}
 
 .grid.grid--triple-padding > .grid__cell {
-  padding: 30px 0; }
+  padding: ($spacing + $spacing--half) 0;
+}
 
 .overlaid {
-  position: relative; }
+  position: relative;
+}
 
+.overlaid__item {
+
+}
 .overlaid__item--topright {
   -webkit-transform: translate(5%, 23%);
   -ms-transform: translate(5%, 23%);
-  transform: translate(5%, 23%); }
+  transform: translate(5%, 23%);
+}
+
 
 /* ==========================================================================
    Specific stuff
    ========================================================================== */
+
 .hero__logo {
   width: 300px;
   height: auto;
-  margin-bottom: 40px; }
-  .hero__logo.parallax1, .hero__logo.hero__logo.parallax2 {
-    display: none; }
+  margin-bottom: $spacing--double;
+
+  &.parallax1, &.hero__logo.parallax2  {
+    display: none;
+  }
+}
 
 .card {
   background: #fff;
   color: #444;
-  padding: 40px 30px 30px; }
+  padding: $spacing--double ($spacing + $spacing--half) ($spacing + $spacing--half);
+}
 
 .mc-email {
-  margin-top: 40px; }
+  margin-top: $spacing--double;
+}
 
 .pricing {
   vertical-align: middle;
   color: #00bbdd;
-  margin: 0 10px 10px 0; }
+  margin: 0 $spacing--half $spacing--half 0;
+}
 
 .section--fullwidth-band {
-  background: #005677;
-  padding: 100px 40px;
-  margin: 100px 0; }
+  background: $brand--primary--darker;
+  padding: $spacing--xlarge $spacing--double;
+  margin: $spacing--xlarge 0;
+}
 
 .section--margin-bottom {
-  margin-bottom: 100px; }
+  margin-bottom: $spacing--xlarge;
+}
 
 .table--schedule {
-  width: 100%; }
-  .table--schedule tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
-  .table--schedule td {
-    padding: 10px 0;
-    vertical-align: top; }
-  .table--schedule tr > td:first-child {
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  td {
+  padding: 10px 0;
+  vertical-align: top;
+  }
+
+  tr > td:first-child {
     width: 120px;
-    text-align: center; }
-  .table--schedule tr > td:last-of-type {
-    color: #444; }
+    text-align: center;
+  }
+
+  tr > td:last-of-type {
+    color: #444;
+  }
+}
 
 footer {
-  margin-top: 40px; }
+  margin-top: $spacing--double;
+}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+
   .card {
-    padding: 60px; }
+    padding: $spacing * 3;
+  }
 
   .table--schedule tr > td:first-child {
-    width: 200px; } }
+    width: 200px;
+  }
+}
+
 /* ==========================================================================
    Typography
    ========================================================================== */
+
 h1, h2, h3 {
-  font-family: "kepler-std-display", serif, serif;
+  font-family: $type--serif, serif;
   font-weight: normal;
-  margin: 0; }
+  margin: 0;
+}
 
 h1 {
-  font-size: 4em; }
+  font-size: 4em;
+}
 
 h2 {
-  font-size: 3em; }
+  font-size: 3em;
+}
 
 h4 {
-  font-family: Montserrat, sans-serif; }
+  font-family: $type--sans-serif, sans-serif;
+}
 
 p {
   margin-top: 0;
-  line-height: auto; }
+  line-height: auto;
+}
 
 a.btn, button.btn, input.btn {
   text-decoration: none;
-  color: #00bbdd;
-  border: 2px solid #00bbdd;
+  color: $brand--primary;
+  border: 2px solid $brand--primary;
   background: transparent;
   @type--uppercase;
-  padding: 15px 60px;
+  padding: ($spacing--half + $spacing--half/2) ($spacing--double + $spacing);
   display: inline-block;
-  margin-top: 20px; }
+  margin-top: $spacing;
+}
 
-input {
-  color: #00bbdd;
-  border: 2px solid #00bbdd;
+input  {
+  color: $brand--primary;
+  border: 2px solid $brand--primary;
   background: transparent;
-  padding: 15px;
+  padding: ($spacing--half + $spacing--half/2);
   display: inline-block;
-  margin-top: 20px; }
+  margin-top: $spacing;
+}
 
 input[type=email] {
-  width: calc(100% - 60px); }
+  width: calc(100% - #{ $spacing--double + $spacing });
+}
 
 .type--number {
   display: inline-block;
-  background: rgba(255, 78, 157, 0.8);
+  background: rgba(255,78,157,0.8);
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff4e9d+0,dd13cd+100 */
-  background: #ff4e9d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ff4e9d 0%, #dd13cd 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ff4e9d 0%, #dd13cd 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ff4e9d 0%, #dd13cd 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e9d', endColorstr='#dd13cd',GradientType=0 );
-  /* IE6-9 */
+  background: #ff4e9d; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ff4e9d 0%, #dd13cd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ff4e9d 0%,#dd13cd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ff4e9d 0%,#dd13cd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e9d', endColorstr='#dd13cd',GradientType=0 ); /* IE6-9 */
   /* text-shadow: 2px 2px rgba(0,0,0,0.3);*/
-  width: 40px;
-  border-radius: 20px;
+  width: $spacing--double;
+  border-radius: $spacing;
   padding: 6px 0;
   text-align: center;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.3); }
+  box-shadow: $spacing--half $spacing--half rgba(0,0,0,0.3);
+}
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 /*
  * Hide visually and from screen readers:
  */
+
 .type--margin-full {
-  margin-bottom: 20px; }
+  margin-bottom: $spacing;
+}
 
 .type--margin-triple {
-  margin-bottom: 60px; }
+  margin-bottom: $spacing * 3;
+}
 
 .type--dark {
-  color: #444; }
-
+  color: $color;
+}
 .type--xl {
   font-size: 40px;
-  line-height: 1.325em; }
+  line-height: 1.325em;
+}
 
 .type--large {
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .type--medium {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 .type--normal {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .type--small {
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .type--uppercase {
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  @include type--uppercase;
+}
 
 .type--italic {
-  font-style: italic; }
+  font-style: italic;
+}
 
 .type--center {
-  text-align: center; }
+  text-align: center;
+}
 
 .type--right {
-  text-align: right; }
+  text-align: right;
+}
 
 .type--margin-half {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+}
 
 .serif {
-  font-family: "kepler-std-display", serif, serif !important;
-  font-weight: normal; }
-
+  font-family: $type--serif, serif !important;
+  font-weight: normal;
+}
 .serif--bold {
-  font-family: "kepler-std-display", serif, serif !important;
-  font-weight: bold; }
+  font-family: $type--serif, serif !important;
+  font-weight: bold;
+}
 
 .sans-serif {
-  font-family: Montserrat, sans-serif !important; }
-
+  font-family: $type--sans-serif, sans-serif !important;
+}
 .sans-serif--light {
-  font-family: 'Montserrat-light', sans-serif !important; }
-
+  font-family: 'Montserrat-light', sans-serif !important;
+}
 .sans-serif--bold {
-  font-family: 'Montserrat-bold', sans-serif !important; }
+  font-family: 'Montserrat-bold', sans-serif !important;
+}
 
 .hidden {
-  display: none !important; }
+  display: none !important;
+}
 
 .display--block {
-  display: block; }
+  display: block;
+}
 
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
+
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
+
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
+
 .invisible {
-  visibility: hidden; }
+    visibility: hidden;
+}
 
 /*
  * Clearfix: contain floats
@@ -371,38 +500,49 @@ input[type=email] {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
 
 .clearfix:after {
-  clear: both; }
+    clear: both;
+}
+
+@media only screen and (min-width: 45em) {
+
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 @media only screen and (min-width: 45em) {
   /* Style adjustments for viewports that meet the condition */
+
   .container {
     padding: 20px;
     max-width: 1460px;
-    margin: 0 auto; }
+    margin: 0 auto;
+  }
 
   .grid {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+  }
 
   .grid--center {
-    justify-content: center; }
+    justify-content: center;
+  }
 
   .grid--end {
-    justify-content: flex-end; }
+    justify-content: flex-end;
+  }
 
   .grid .grid__cell {
     -webkit-box-flex: 1;
@@ -410,151 +550,184 @@ input[type=email] {
     -ms-flex: 1 1 0%;
     flex: 1 1 0%;
     flex-grow: 1;
-    padding: 10px; }
+    padding: 10px;
+  }
 
   .grid.grid--triple-padding {
-    width: 100%; }
+    width: 100%;
+  }
 
   .grid.grid--triple-padding > .grid__cell {
-    padding: 0 30px; }
+    padding: 0 30px;
+  }
 
-  .grid--triple-padding > .grid__cell:first-of-type {
-    padding-left: 0; }
-
-  .grid--triple-padding > .grid__cell:last-of-type {
-    padding-right: 0; }
+  .grid--triple-padding > .grid__cell:first-of-type { padding-left: 0; }
+  .grid--triple-padding > .grid__cell:last-of-type { padding-right: 0; }
 
   .grid .grid__cell.grid__cell--three-quarter {
     flex-basis: 75%;
     flex-grow: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+  }
 
   .grid .grid__cell.grid__cell--half {
     flex-basis: 50%;
     flex-grow: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+  }
 
   .grid .grid__cell.grid__cell--quarter {
     flex-basis: 25%;
     flex-grow: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+  }
 
   .grid .grid__cell.grid__cell--quarter.fr-headline {
     flex-basis: 27%;
     flex-grow: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+  }
 
   .grid .grid__cell.grid__cell--no-flex {
-    flex: 0 0 auto; }
+    flex: 0 0 auto;
+  }
 
   .overlaid {
-    position: relative; }
+    position: relative;
+  }
 
   .overlaid__item {
     position: absolute;
-    max-width: auto; }
-
+    max-width: auto;
+  }
   .overlaid__item--topright {
     -webkit-transform: translate(30%, 10%);
     -ms-transform: translate(30%, 10%);
-    transform: translate(30%, 10%); }
+    transform: translate(30%, 10%);
+  }
 
   .parallax-container {
     position: relative;
     width: 100;
-    max-width: 100%; }
+    max-width: 100%;
+  }
 
   .hero.parallax-container {
     height: 300px;
-    width: 300px; }
+    width: 300px;
+  }
 
   .parallax {
     position: absolute;
     left: 0;
     top: 0;
-    height: auto; }
+    height: auto;
+  }
 
   .hero__logo.parallax {
     width: 300px;
-    display: inherit; }
+    display: inherit;
+  }
 
   .event-info.parallax-container {
     height: 80px;
-    width: 500px; }
-
+    width: 500px;
+  }
   .event-info .parallax {
-    width: 500px; }
+    width: 500px;
+  }
 
   .event-info .parallax:last-child {
-    margin-top: 0px; }
+    margin-top: 0px;
+  }
 
   .parallax1 {
-    opacity: 0.3; }
-
+    opacity: 0.3;
+  }
   .parallax2 {
-    opacity: 0.1; } }
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
+    opacity: 0.1;
+  }
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+
 @media print {
   *,
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+  }
 
   a,
   a:visited {
-    text-decoration: underline; }
+      text-decoration: underline;
+  }
 
   a[href]:after {
-    content: " (" attr(href) ")"; }
+      content: " (" attr(href) ")";
+  }
 
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
+      content: " (" attr(title) ")";
+  }
 
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
+
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
-    content: ""; }
+      content: "";
+  }
 
   pre,
   blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
+      border: 1px solid #999;
+      page-break-inside: avoid;
+  }
 
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
+
   thead {
-    display: table-header-group; }
+      display: table-header-group;
+  }
 
   tr,
   img {
-    page-break-inside: avoid; }
+      page-break-inside: avoid;
+  }
 
   img {
-    max-width: 100% !important; }
+      max-width: 100% !important;
+  }
 
   p,
   h2,
   h3 {
-    orphans: 3;
-    widows: 3; }
+      orphans: 3;
+      widows: 3;
+  }
 
   h2,
   h3 {
-    page-break-after: avoid; } }
-
-/*# sourceMappingURL=main.css.map */
+      page-break-after: avoid;
+  }
+}
