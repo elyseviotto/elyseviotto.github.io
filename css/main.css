@@ -304,11 +304,11 @@ input[type=email] {
   margin-bottom: 1.5em; }
 
 .serif {
-  font-family: "kepler-std-display", serif, serif !important;
+  font-family: "kepler-std", "kepler-std-display", serif, serif !important;
   font-weight: normal; }
 
 .serif--bold {
-  font-family: "kepler-std-display", serif, serif !important;
+  font-family: "kepler-std", "kepler-std-display", serif, serif !important;
   font-weight: bold; }
 
 .sans-serif {

@@ -10,7 +10,8 @@
    Variables
    ========================================================================== */
 
-$type--serif: 'kepler-std-display', serif;
+$type--serif: 'kepler-std', 'kepler-std-display', serif;
+$type--display: 'kepler-std-display', serif;
 $type--sans-serif: Montserrat;
 $color: #444;
 
@@ -299,7 +300,7 @@ footer {
    ========================================================================== */
 
 h1, h2, h3 {
-  font-family: $type--serif, serif;
+  font-family: $type--display, serif;
   font-weight: normal;
   margin: 0;
 }
