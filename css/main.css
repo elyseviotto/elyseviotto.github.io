@@ -163,7 +163,7 @@ address {
   margin: 0 10px 10px 0; }
 
 .section--fullwidth {
-  background: #005677;
+  background: rgba(0, 0, 0, 0.7);
   padding: 100px 40px;
   margin: 100px 0; }
   .section--fullwidth.section--fullwidth--footer {
@@ -218,15 +218,14 @@ footer {
 
 .hero__container {
   position: relative;
-  height: 820px;
-  max-height: 100vw;
-  width: 820px; }
+  height: 351.42857px;
+  width: 351.42857px; }
 
 .hero {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 820px;
-  height: 820px; }
+  width: 351.42857px;
+  height: 351.42857px; }
   .hero.hero1 {
     background-image: url(../assets/img/hero/hero-1-morceaux.png); }
   .hero.hero2 {
@@ -492,6 +491,17 @@ input[type=email] {
   .grid .grid__cell.grid__cell--no-flex {
     flex: 0 0 auto; }
 
+  .hero__container {
+    position: relative;
+    height: 820px;
+    width: 820px; }
+
+  .hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 820px;
+    height: 820px; }
+
   .bring-up {
     margin-top: -40px; }
 
@@ -520,13 +530,7 @@ input[type=email] {
     width: 500px; }
 
   .event-info .parallax:last-child {
-    margin-top: 0px; }
-
-  .parallax1 {
-    opacity: 0.3; }
-
-  .parallax2 {
-    opacity: 0.1; } }
+    margin-top: 0px; } }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================

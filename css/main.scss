@@ -23,7 +23,7 @@ $color--inverted: #fff;
 $color--inverted--light: rgba(255,255,255,0.8);
 
 $brand--primary: #00bbdd;
-$brand--primary--darker: #005677;
+$brand--primary--darker: rgba(0,0,0, 0.7);
 
 $spacing: 20px;
 $spacing--half: 10px;
@@ -351,18 +351,15 @@ footer {
 
 .hero__container {
   position: relative;
-  height: ($hero-size / 3);
-  max-height: 100vw;
-  width: ($hero-size / 3);
+  height: ($hero-size / 7);
+  width: ($hero-size / 7);
 }
-
-
 
 .hero {
   background-size: contain;
   background-repeat: no-repeat;
-  width: ($hero-size / 3);
-  height: ($hero-size / 3);
+  width: ($hero-size / 7);
+  height: ($hero-size / 7);
 
   &.hero1 {
     background-image: url(../assets/img/hero/hero-1-morceaux.png);
@@ -689,6 +686,19 @@ input[type=email] {
     flex: 0 0 auto;
   }
 
+  .hero__container {
+    position: relative;
+    height: ($hero-size / 3);
+    width: ($hero-size / 3);
+  }
+
+  .hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: ($hero-size / 3);
+    height: ($hero-size / 3);
+  }
+
   .bring-up {
     margin-top: -($spacing--double);
   }
@@ -720,13 +730,6 @@ input[type=email] {
 
   .event-info .parallax:last-child {
     margin-top: 0px;
-  }
-
-  .parallax1 {
-    opacity: 0.3;
-  }
-  .parallax2 {
-    opacity: 0.1;
   }
 }
 
