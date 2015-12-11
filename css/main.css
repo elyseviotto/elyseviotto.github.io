@@ -153,9 +153,6 @@ address {
   width: calc(100% - ( 20px * 2 ));
   z-index: 9999; }
 
-.language-switcher {
-  padding: 10px 20px; }
-
 .card {
   background: #fff;
   color: #444;
@@ -273,6 +270,11 @@ a.btn, button.btn, input.btn {
   a.btn.btn--inverted, button.btn.btn--inverted, input.btn.btn--inverted {
     color: #fff;
     border-color: #fff; }
+
+a.language-switcher {
+  padding: 10px 20px; }
+  a.language-switcher:hover {
+    border-color: transparent; }
 
 input {
   color: #00bbdd;
@@ -428,8 +430,10 @@ input[type=email] {
   /* Style adjustments for viewports that meet the condition */
   .container {
     padding: 20px;
-    max-width: 1460px;
     margin: 0 auto; }
+    .container .grid:first-of-type {
+      max-width: 1460px;
+      margin: 0 auto; }
 
   .grid {
     display: flex;

@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
   //parallax effect
-  $('body').jKit();
+
+  var scene = document.getElementById('hero');
+  var parallax = new Parallax(scene);
+
+
+  //$('body').jKit();
 
   // Defining a function to set size for #hero
   // function fullscreen(){

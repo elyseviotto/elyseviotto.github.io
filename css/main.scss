@@ -261,10 +261,6 @@ address {
   z-index: 9999;
 }
 
-.language-switcher {
-  padding: $spacing--half $spacing;
-}
-
 .card {
   background: #fff;
   color: #444;
@@ -420,6 +416,13 @@ a.btn, button.btn, input.btn {
   &.btn--inverted {
     color: #fff;
     border-color: #fff;
+  }
+}
+
+a.language-switcher {
+  padding: $spacing--half $spacing;
+  &:hover {
+    border-color: transparent;
   }
 }
 
@@ -609,8 +612,12 @@ input[type=email] {
 
   .container {
     padding: 20px;
-    max-width: 1460px;
     margin: 0 auto;
+
+    .grid:first-of-type {
+      max-width: 1460px;
+      margin: 0 auto;
+    }
   }
 
   .grid {
