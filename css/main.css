@@ -31,7 +31,7 @@
   font-style: normal; }
 html {
   color: #fff;
-  font-size: 1em;
+  font-size: 14px;
   line-height: 1.4;
   font-family: Montserrat, arial, sans-serif;
   background-color: #00bbdd; }
@@ -105,7 +105,8 @@ textarea {
 
 address {
   font-style: normal;
-  line-height: 24px; }
+  line-height: 24px;
+  display: inline-block; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -146,12 +147,10 @@ address {
 /* ==========================================================================
    Specific stuff
    ========================================================================== */
-.hero__logo {
-  width: 300px;
-  height: auto;
-  margin-bottom: 40px; }
-  .hero__logo.parallax1, .hero__logo.hero__logo.parallax2 {
-    display: none; }
+.nav {
+  position: fixed;
+  height: 30px;
+  width: calc(100% - ( 20px * 2 )); }
 
 .card {
   background: #fff;
@@ -163,10 +162,14 @@ address {
   color: #00bbdd;
   margin: 0 10px 10px 0; }
 
-.section--fullwidth-band {
+.section--fullwidth {
   background: #005677;
   padding: 100px 40px;
   margin: 100px 0; }
+  .section--fullwidth.section--fullwidth--footer {
+    background: #000;
+    margin: 0;
+    padding: 80px; }
 
 .section--margin-bottom {
   margin-bottom: 100px; }
@@ -187,6 +190,13 @@ address {
 footer {
   margin-top: 40px; }
 
+.logo--shopify {
+  margin-bottom: 40px;
+  border-bottom: 0;
+  max-width: 150px;
+  width: 150px;
+  height: auto; }
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
   .card {
@@ -194,6 +204,38 @@ footer {
 
   .table--schedule tr > td:first-child {
     width: 200px; } }
+/* ==========================================================================
+   Logo image
+   ========================================================================== */
+.parallax-container {
+  position: relative;
+  max-width: 100%; }
+
+.parallax {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.hero__container {
+  position: relative;
+  height: 820px;
+  max-height: 100vw;
+  width: 820px; }
+
+.hero {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 820px;
+  height: 820px; }
+  .hero.hero1 {
+    background-image: url(../assets/img/hero/hero-1-morceaux.png); }
+  .hero.hero2 {
+    background-image: url(../assets/img/hero/hero-2-forme.png); }
+  .hero.hero3 {
+    background-image: url(../assets/img/hero/hero-3-cube.png); }
+  .hero.hero4 {
+    background-image: url(../assets/img/hero/hero-4-logo.png); }
+
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -213,7 +255,7 @@ h4 {
 
 p {
   margin-top: 0;
-  line-height: auto; }
+  line-height: 28px; }
 
 a.btn, button.btn, input.btn {
   text-decoration: none;
@@ -224,6 +266,9 @@ a.btn, button.btn, input.btn {
   padding: 15px 60px;
   display: inline-block;
   margin-top: 20px; }
+  a.btn.btn--inverted, button.btn.btn--inverted, input.btn.btn--inverted {
+    color: #fff;
+    border-color: #fff; }
 
 input {
   color: #00bbdd;
@@ -238,25 +283,7 @@ input[type=email] {
   width: calc(100% - 60px) !important; }
 
 .type--number {
-  display: inline-block;
-  background: rgba(255, 78, 157, 0.8);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff4e9d+0,dd13cd+100 */
-  background: #ff4e9d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ff4e9d 0%, #dd13cd 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ff4e9d 0%, #dd13cd 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ff4e9d 0%, #dd13cd 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e9d', endColorstr='#dd13cd',GradientType=0 );
-  /* IE6-9 */
-  /* text-shadow: 2px 2px rgba(0,0,0,0.3);*/
-  width: 40px;
-  border-radius: 20px;
-  padding: 6px 0;
-  text-align: center;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.3); }
+  font-size: 24px; }
 
 /* ==========================================================================
    Helper classes
@@ -271,23 +298,21 @@ input[type=email] {
   margin-bottom: 60px; }
 
 .type--dark {
-  color: #444; }
+  color: #000; }
 
 .type--xl {
-  font-size: 40px;
+  font-size: 72px;
   line-height: 1.325em; }
 
 .type--large {
-  font-size: 2em; }
+  font-size: 30px; }
 
 .type--medium {
-  font-size: 24px; }
+  font-size: 24px;
+  line-height: 32px; }
 
 .type--normal {
-  font-size: 16px; }
-
-.type--small {
-  font-size: 14px; }
+  font-size: 18px; }
 
 .type--display {
   font-family: "kepler-std-display", serif; }
@@ -307,6 +332,9 @@ input[type=email] {
 
 .type--margin-half {
   margin-bottom: 1.5em; }
+
+.type--underlined {
+  border-bottom: 4px solid #000; }
 
 .serif {
   font-family: "kepler-std", "kepler-std-display", serif, serif !important;
@@ -417,6 +445,13 @@ input[type=email] {
     flex-grow: 1;
     padding: 10px; }
 
+  .grid__cell > .grid {
+    width: 100%; }
+    .grid__cell > .grid > .grid__cell:first-of-type {
+      padding-left: 0; }
+    .grid__cell > .grid > .grid__cell:last-of-type {
+      padding-right: 0; }
+
   .grid.grid--triple-padding {
     width: 100%; }
 
@@ -444,6 +479,11 @@ input[type=email] {
     flex-grow: 0;
     flex-shrink: 0; }
 
+  .grid .grid__cell.grid__cell--fifth {
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0; }
+
   .grid .grid__cell.grid__cell--quarter.fr-headline {
     flex-basis: 27%;
     flex-grow: 0;
@@ -451,6 +491,9 @@ input[type=email] {
 
   .grid .grid__cell.grid__cell--no-flex {
     flex: 0 0 auto; }
+
+  .bring-up {
+    margin-top: -40px; }
 
   .overlaid {
     position: relative; }
@@ -460,28 +503,14 @@ input[type=email] {
     max-width: auto; }
 
   .overlaid__item--topright {
-    -webkit-transform: translate(30%, 10%);
-    -ms-transform: translate(30%, 10%);
-    transform: translate(30%, 10%); }
+    -webkit-transform: translate(-36%, 10%);
+    -ms-transform: translate(-36%, 10%);
+    transform: translate(-36%, 10%); }
 
-  .parallax-container {
-    position: relative;
-    width: 100;
-    max-width: 100%; }
-
-  .hero.parallax-container {
-    height: 300px;
-    width: 300px; }
-
-  .parallax {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: auto; }
-
-  .hero__logo.parallax {
-    width: 300px;
-    display: inherit; }
+  .overlaid__item--jury-fr {
+    -webkit-transform: translate(-49%, 40%);
+    -ms-transform: translate(-49% 40%);
+    transform: translate(-49%, 40%); }
 
   .event-info.parallax-container {
     height: 80px;

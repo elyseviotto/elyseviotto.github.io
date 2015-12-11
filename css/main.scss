@@ -10,10 +10,14 @@
    Variables
    ========================================================================== */
 
+$typesize--paragraph: 14px;
+$typesize--normal: 18px;
+$typesize--medium: 24px;
+
 $type--serif: 'kepler-std', 'kepler-std-display', serif;
 $type--display: 'kepler-std-display', serif;
 $type--sans-serif: Montserrat;
-$color: #444;
+$color: #000;
 
 $color--inverted: #fff;
 $color--inverted--light: rgba(255,255,255,0.8);
@@ -26,6 +30,8 @@ $spacing--half: 10px;
 $spacing--double: 40px;
 $spacing--xlarge: 100px;
 
+$hero-size: 2460px;
+
 @mixin type--uppercase {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -34,6 +40,20 @@ $spacing--xlarge: 100px;
 @mixin calc($property, $expression) {
   #{$property}: -webkit-calc(#{$expression}) !important;
   #{$property}: calc(#{$expression}) !important;
+}
+
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x $y);
+          transform: translate($x, $y);
+
 }
 
 /* ==========================================================================
@@ -81,7 +101,7 @@ $spacing--xlarge: 100px;
 
 html {
   color: $color--inverted;
-  font-size: 1em;
+  font-size: $typesize--paragraph;
   line-height: 1.4;
   font-family: $type--sans-serif, arial, sans-serif;
   background-color: $brand--primary;
@@ -177,6 +197,7 @@ textarea {
 address {
   font-style: normal;
   line-height: 24px;
+  display: inline-block;
 }
 
 /* ==========================================================================
@@ -233,14 +254,11 @@ address {
    Specific stuff
    ========================================================================== */
 
-.hero__logo {
-  width: 300px;
-  height: auto;
-  margin-bottom: $spacing--double;
+.nav {
+  position: fixed;
+  height: 30px;
+  width: calc(100% - ( #{$spacing} * 2 ));
 
-  &.parallax1, &.hero__logo.parallax2  {
-    display: none;
-  }
 }
 
 .card {
@@ -255,10 +273,16 @@ address {
   margin: 0 $spacing--half $spacing--half 0;
 }
 
-.section--fullwidth-band {
+.section--fullwidth {
   background: $brand--primary--darker;
   padding: $spacing--xlarge $spacing--double;
   margin: $spacing--xlarge 0;
+
+  &.section--fullwidth--footer {
+    background: $color;
+    margin: 0;
+    padding: $spacing--double * 2;
+  }
 }
 
 .section--margin-bottom {
@@ -290,6 +314,14 @@ footer {
   margin-top: $spacing--double;
 }
 
+.logo--shopify {
+  margin-bottom: $spacing--double;
+  border-bottom: 0;
+  max-width: 150px;
+  width: 150px;
+  height: auto;
+}
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 
@@ -299,6 +331,50 @@ footer {
 
   .table--schedule tr > td:first-child {
     width: 200px;
+  }
+}
+
+/* ==========================================================================
+   Logo image
+   ========================================================================== */
+
+.parallax-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.parallax {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero__container {
+  position: relative;
+  height: ($hero-size / 3);
+  max-height: 100vw;
+  width: ($hero-size / 3);
+}
+
+
+
+.hero {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: ($hero-size / 3);
+  height: ($hero-size / 3);
+
+  &.hero1 {
+    background-image: url(../assets/img/hero/hero-1-morceaux.png);
+  }
+  &.hero2 {
+    background-image: url(../assets/img/hero/hero-2-forme.png);
+  }
+  &.hero3 {
+    background-image: url(../assets/img/hero/hero-3-cube.png);
+  }
+  &.hero4 {
+    background-image: url(../assets/img/hero/hero-4-logo.png);
   }
 }
 
@@ -326,7 +402,7 @@ h4 {
 
 p {
   margin-top: 0;
-  line-height: auto;
+  line-height: 28px;
 }
 
 a.btn, button.btn, input.btn {
@@ -338,6 +414,11 @@ a.btn, button.btn, input.btn {
   padding: ($spacing--half + $spacing--half/2) ($spacing--double + $spacing);
   display: inline-block;
   margin-top: $spacing;
+
+  &.btn--inverted {
+    color: #fff;
+    border-color: #fff;
+  }
 }
 
 input  {
@@ -354,20 +435,7 @@ input[type=email] {
 }
 
 .type--number {
-  display: inline-block;
-  background: rgba(255,78,157,0.8);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff4e9d+0,dd13cd+100 */
-  background: #ff4e9d; /* Old browsers */
-  background: -moz-linear-gradient(top,  #ff4e9d 0%, #dd13cd 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #ff4e9d 0%,#dd13cd 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #ff4e9d 0%,#dd13cd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4e9d', endColorstr='#dd13cd',GradientType=0 ); /* IE6-9 */
-  /* text-shadow: 2px 2px rgba(0,0,0,0.3);*/
-  width: $spacing--double;
-  border-radius: $spacing;
-  padding: 6px 0;
-  text-align: center;
-  box-shadow: $spacing--half $spacing--half rgba(0,0,0,0.3);
+  font-size: 24px;
 }
 
 /* ==========================================================================
@@ -390,24 +458,21 @@ input[type=email] {
   color: $color;
 }
 .type--xl {
-  font-size: 40px;
+  font-size: 72px;
   line-height: 1.325em;
 }
 
 .type--large {
-  font-size: 2em;
+  font-size: 30px;
 }
 
 .type--medium {
-  font-size: 24px;
+  font-size: $typesize--medium;
+  line-height: 32px;
 }
 
 .type--normal {
-  font-size: 16px;
-}
-
-.type--small {
-  font-size: 14px;
+  font-size: $typesize--normal;
 }
 
 .type--display {
@@ -431,6 +496,10 @@ input[type=email] {
 
 .type--margin-half {
   margin-bottom: 1.5em;
+}
+
+.type--underlined {
+  border-bottom: 4px solid $color;
 }
 
 .serif {
@@ -564,6 +633,17 @@ input[type=email] {
     padding: 10px;
   }
 
+  .grid__cell > .grid {
+    width: 100%;
+
+    > .grid__cell:first-of-type {
+      padding-left: 0;
+    }
+    > .grid__cell:last-of-type {
+      padding-right: 0;
+    }
+  }
+
   .grid.grid--triple-padding {
     width: 100%;
   }
@@ -593,6 +673,12 @@ input[type=email] {
     flex-shrink: 0;
   }
 
+  .grid .grid__cell.grid__cell--fifth {
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
   .grid .grid__cell.grid__cell--quarter.fr-headline {
     flex-basis: 27%;
     flex-grow: 0;
@@ -603,6 +689,9 @@ input[type=email] {
     flex: 0 0 auto;
   }
 
+  .bring-up {
+    margin-top: -($spacing--double);
+  }
   .overlaid {
     position: relative;
   }
@@ -612,32 +701,13 @@ input[type=email] {
     max-width: auto;
   }
   .overlaid__item--topright {
-    -webkit-transform: translate(30%, 10%);
-    -ms-transform: translate(30%, 10%);
-    transform: translate(30%, 10%);
+    -webkit-transform: translate(-36%, 10%);
+    -ms-transform: translate(-36%, 10%);
+    transform: translate(-36%, 10%);
   }
 
-  .parallax-container {
-    position: relative;
-    width: 100;
-    max-width: 100%;
-  }
-
-  .hero.parallax-container {
-    height: 300px;
-    width: 300px;
-  }
-
-  .parallax {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: auto;
-  }
-
-  .hero__logo.parallax {
-    width: 300px;
-    display: inherit;
+  .overlaid__item--jury-fr {
+    @include translate(-49%, 40%);
   }
 
   .event-info.parallax-container {
