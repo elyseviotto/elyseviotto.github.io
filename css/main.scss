@@ -258,7 +258,11 @@ address {
   position: fixed;
   height: 30px;
   width: calc(100% - ( #{$spacing} * 2 ));
+  z-index: 9999;
+}
 
+.language-switcher {
+  padding: $spacing--half $spacing;
 }
 
 .card {
@@ -462,6 +466,7 @@ input[type=email] {
 
 .type--large {
   font-size: 30px;
+  line-height: 36px;
 }
 
 .type--medium {
@@ -688,8 +693,8 @@ input[type=email] {
   }
 
   .hero__container {
-    width: ($hero-size / 3);
-    height: ($hero-size / 3);
+    width: ($hero-size / 2);
+    height: ($hero-size / 2);
     padding-top: 0;
   }
 

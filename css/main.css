@@ -150,7 +150,11 @@ address {
 .nav {
   position: fixed;
   height: 30px;
-  width: calc(100% - ( 20px * 2 )); }
+  width: calc(100% - ( 20px * 2 ));
+  z-index: 9999; }
+
+.language-switcher {
+  padding: 10px 20px; }
 
 .card {
   background: #fff;
@@ -305,7 +309,8 @@ input[type=email] {
   line-height: 1.325em; }
 
 .type--large {
-  font-size: 30px; }
+  font-size: 30px;
+  line-height: 36px; }
 
 .type--medium {
   font-size: 24px;
@@ -493,8 +498,8 @@ input[type=email] {
     flex: 0 0 auto; }
 
   .hero__container {
-    width: 820px;
-    height: 820px;
+    width: 1230px;
+    height: 1230px;
     padding-top: 0; }
 
   .bring-up {
