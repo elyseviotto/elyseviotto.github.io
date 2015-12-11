@@ -463,7 +463,7 @@ input[type=email] {
   color: $color;
 }
 .type--xl {
-  font-size: 72px;
+  font-size: 60px;
   line-height: 1.325em;
 }
 
@@ -598,6 +598,9 @@ input[type=email] {
 }
 
 @media only screen and (min-width: 45em) {
+  .type--xl {
+    font-size: 72px;
+  }
 
 }
 

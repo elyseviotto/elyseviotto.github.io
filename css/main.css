@@ -307,7 +307,7 @@ input[type=email] {
   color: #000; }
 
 .type--xl {
-  font-size: 72px;
+  font-size: 60px;
   line-height: 1.325em; }
 
 .type--large {
@@ -421,6 +421,9 @@ input[type=email] {
 .clearfix:after {
   clear: both; }
 
+@media only screen and (min-width: 45em) {
+  .type--xl {
+    font-size: 72px; } }
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
