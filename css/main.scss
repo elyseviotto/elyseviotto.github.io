@@ -465,6 +465,10 @@ input[type=email] {
 .type--xl {
   font-size: 60px;
   line-height: 1.325em;
+
+  &.fr {
+    font-size: 54px;
+  }
 }
 
 .type--large {

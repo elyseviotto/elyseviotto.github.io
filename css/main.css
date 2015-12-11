@@ -309,6 +309,8 @@ input[type=email] {
 .type--xl {
   font-size: 60px;
   line-height: 1.325em; }
+  .type--xl.fr {
+    font-size: 54px; }
 
 .type--large {
   font-size: 30px;
