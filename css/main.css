@@ -178,6 +178,9 @@ address {
 .section--margin-bottom {
   margin-bottom: 100px; }
 
+.section--margin-bottom-half {
+  margin-bottom: 20px; }
+
 .table--schedule {
   width: 100%; }
   .table--schedule tr {
@@ -198,7 +201,8 @@ address {
   border-radius: 60px;
   background-color: rgba(255, 255, 255, 0.5);
   height: auto;
-  width: 120px; }
+  width: 120px;
+  margin-top: 20px; }
 
 footer {
   margin-top: 40px; }
@@ -216,7 +220,10 @@ footer {
     padding: 60px; }
 
   .table--schedule tr > td:first-child {
-    width: 200px; } }
+    width: 200px; }
+
+  .img--circle {
+    margin-top: 0; } }
 /* ==========================================================================
    Logo image
    ========================================================================== */
@@ -451,7 +458,7 @@ input[type=email] {
   .container {
     padding: 20px;
     margin: 0 auto; }
-    .container .grid:first-of-type {
+    .container .grid:first-of-type, .container > .grid {
       max-width: 1460px;
       margin: 0 auto; }
 
