@@ -317,8 +317,9 @@ address {
 .img--circle {
   @include radius(60px);
 
-  width: 120px;
+  background-color: rgba(255,255,255,0.5);
   height: auto;
+  width: 120px;
 }
 
 footer {
