@@ -18,6 +18,7 @@ $type--serif: 'kepler-std', 'kepler-std-display', serif;
 $type--display: 'kepler-std-display', serif;
 $type--sans-serif: Montserrat;
 $color: #000;
+$color--lighter: #333;
 
 $color--inverted: #fff;
 $color--inverted--light: rgba(255,255,255,0.8);
@@ -139,14 +140,17 @@ hr {
   }
 
 a {
+  color: $color;
   text-decoration: none;
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
   transition: 0.3s all linear;
   -moz-transition: 0.3s all linear;
   -webkit-transition: 0.3s all linear;
+  color: $color--lighter;
+  border-color: $color--lighter;
 }
 
 a.inverted {
@@ -308,6 +312,13 @@ address {
   tr > td:last-of-type {
     color: #444;
   }
+}
+
+.img--circle {
+  @include radius(60px);
+
+  width: 120px;
+  height: auto;
 }
 
 footer {
@@ -502,6 +513,10 @@ input[type=email] {
 
 .type--right {
   text-align: right;
+}
+
+.type--no-margin {
+  margin-bottom: 0;
 }
 
 .type--margin-half {
@@ -730,7 +745,7 @@ input[type=email] {
   }
 
   .overlaid__item--jury-fr {
-    @include translate(-49%, 40%);
+    @include translate(-52%, -30%);
   }
 
   .event-info.parallax-container {

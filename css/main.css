@@ -63,13 +63,16 @@ hr {
   padding: 0; }
 
 a {
+  color: #000;
   text-decoration: none;
-  border: 1px solid transparent; }
+  border-bottom: 1px solid transparent; }
 
 a:hover {
   transition: 0.3s all linear;
   -moz-transition: 0.3s all linear;
-  -webkit-transition: 0.3s all linear; }
+  -webkit-transition: 0.3s all linear;
+  color: #333;
+  border-color: #333; }
 
 a.inverted {
   color: rgba(255, 255, 255, 0.8); }
@@ -187,6 +190,14 @@ address {
     text-align: center; }
   .table--schedule tr > td:last-of-type {
     color: #444; }
+
+.img--circle {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+  width: 120px;
+  height: auto; }
 
 footer {
   margin-top: 40px; }
@@ -338,6 +349,9 @@ input[type=email] {
 
 .type--right {
   text-align: right; }
+
+.type--no-margin {
+  margin-bottom: 0; }
 
 .type--margin-half {
   margin-bottom: 1.5em; }
@@ -527,9 +541,9 @@ input[type=email] {
     transform: translate(-36%, 10%); }
 
   .overlaid__item--jury-fr {
-    -webkit-transform: translate(-49%, 40%);
-    -ms-transform: translate(-49% 40%);
-    transform: translate(-49%, 40%); }
+    -webkit-transform: translate(-52%, -30%);
+    -ms-transform: translate(-52% -30%);
+    transform: translate(-52%, -30%); }
 
   .event-info.parallax-container {
     height: 80px;
