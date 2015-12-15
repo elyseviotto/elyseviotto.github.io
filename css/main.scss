@@ -323,6 +323,7 @@ svg.defs {
   width:0;
   margin:0;
   padding:0;
+  display: none;
 }
 
 .link--social {
@@ -335,8 +336,8 @@ svg.defs {
 
   svg {
     display: inline-block;
-    width: $spacing + 5px;
-    height: $spacing + 5px;
+    width: $spacing;
+    height: $spacing;
     padding: $spacing--half;
     vertical-align: middle;
   }
