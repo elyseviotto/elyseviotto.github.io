@@ -3,6 +3,26 @@ $(document).ready(function(){
   //parallax effect
   var scene = document.getElementById('hero');
   var parallax = new Parallax(scene);
+  var menuTriggers = document.querySelectorAll('[data-menu-trigger]');
+  var sideNavigation = document.querySelector('#side-navigation');
+  var sideNavigationItems = document.querySelectorAll('#side-navigation ul a');
+
+  $('.hero').imagesLoaded( { background: true }, function() {
+    scene.classList.add('parallax-container--active');
+  });
+
+  [].forEach.call(menuTriggers, function(el) {
+    el.addEventListener('click', function() {
+      sideNavigation.classList.toggle('side-navigation--active');
+      return false;
+    });
+  });
+
+  [].forEach.call(sideNavigationItems, function(el) {
+    el.addEventListener('click', function(){
+      sideNavigation.classList.remove('side-navigation--active');
+    });
+  });
 
   $(function () {
 

@@ -108,6 +108,9 @@ html {
   background-color: $brand--primary;
 }
 
+html,
+body { overflow-x: hidden; }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -262,7 +265,7 @@ address {
   position: fixed;
   height: 30px;
   width: calc(100% - ( #{$spacing} * 2 ));
-  z-index: 9999;
+  z-index: 100;
 }
 
 .card {
@@ -396,11 +399,21 @@ footer {
   top: 0;
 }
 
+.parallax-container {
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  &.parallax-container--active {
+    opacity: 1;
+  }
+}
+
 .hero__container {
   position: relative;
   height: auto;
   width: 100%;
   padding-top: 100%;
+
 }
 
 .hero {
@@ -588,6 +601,52 @@ input[type=email] {
 
 .display--block {
   display: block;
+}
+
+/* Side Nav */
+
+.menu-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  z-index: 150;
+  text-decoration: none;
+  background: #fff;
+  border: 0 none;
+}
+
+.close-menu-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  z-index: 150;
+  text-decoration: none;
+  background: #fff;
+  border: 0 none;
+}
+
+.side-navigation {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform .15s linear;
+  padding-top: 30px;
+  background: #c0c0c0;
+  color: #fff;
+  z-index: 200;
+
+  &.side-navigation--active {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /*
