@@ -194,6 +194,24 @@ address {
   .table--schedule tr > td:last-of-type {
     color: #444; }
 
+svg.defs {
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0; }
+
+.link--social {
+  fill: #000; }
+  .link--social:hover {
+    border-color: transparent;
+    fill: #fff; }
+  .link--social svg {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    vertical-align: middle; }
+
 .img--circle {
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;

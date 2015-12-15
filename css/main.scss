@@ -318,6 +318,30 @@ address {
   }
 }
 
+svg.defs {
+  height:0;
+  width:0;
+  margin:0;
+  padding:0;
+}
+
+.link--social {
+  fill: #000;
+
+  &:hover {
+    border-color: transparent;
+    fill: #fff;
+  }
+
+  svg {
+    display: inline-block;
+    width: $spacing + 5px;
+    height: $spacing + 5px;
+    padding: $spacing--half;
+    vertical-align: middle;
+  }
+}
+
 .img--circle {
   @include radius(60px);
 
