@@ -547,6 +547,9 @@ input[type=email] {
   .grid .grid__cell.grid__cell--no-flex {
     flex: 0 0 auto; }
 
+  .grid.grid--stretch {
+    align-items: stretch; }
+
   .hero__container {
     width: 1230px;
     height: 1230px;

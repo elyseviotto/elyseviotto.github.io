@@ -755,6 +755,10 @@ input[type=email] {
     flex: 0 0 auto;
   }
 
+  .grid.grid--stretch {
+    align-items: stretch;
+  }
+
   .hero__container {
     width: ($hero-size / 2);
     height: ($hero-size / 2);
