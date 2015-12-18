@@ -167,6 +167,23 @@ $(document).ready(function(){
           twitter: 'audreelapierre'
         },
         {
+          name: 'JF LeBlanc',
+          img: 'jf-leblanc.jpg',
+          titleFr: 'Associé principal, directeur de la création',
+          titleEn: 'Associate & Creative director',
+          bioFr: 'Associé et directeur de création de l’agence LaBase, JF possède une longue feuille de route à titre de designer graphique chez Desjardins Bibeau, Studio DB, VP création chez Station Communications, puis directeur artistique publicitaire chez Cossette, et chef de groupe création chez bleublancrouge.',
+          bioEn: '',
+          workplace: 'La Base',
+          workUrl: '//labase.tv',
+          behance: '',
+          dribbble: '',
+          facebook: '',
+          instagram: '',
+          linkedin: '',
+          portfolio: '',
+          twitter: ''
+        },
+        {
           name: 'Alex Nemeroff',
           img: 'alex-nemeroff.jpg',
           titleFr: 'Chef design et UX',
