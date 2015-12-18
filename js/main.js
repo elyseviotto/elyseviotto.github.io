@@ -60,7 +60,7 @@ $(document).ready(function(){
           dribbble: '',
           facebook: '',
           instagram: '',
-          linkedin: '',
+          linkedin: 'https://ca.linkedin.com/in/nicolasbaldovini',
           portfolio: '',
           twitter: 'nico2bux'
         },
