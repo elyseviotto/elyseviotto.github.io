@@ -10,7 +10,7 @@
    Variables
    ========================================================================== */
 
-$typesize--paragraph: 14px;
+$typesize--paragraph: 16px;
 $typesize--normal: 18px;
 $typesize--medium: 24px;
 
@@ -281,6 +281,8 @@ address {
   background: $brand--primary--darker;
   padding: $spacing--xlarge $spacing--double;
   margin: $spacing--xlarge 0;
+  background-image: url(../assets/img/on-display-pattern.png);
+  background-size: 50%;
 
   &.section--fullwidth--footer {
     background: $color;
@@ -496,6 +498,10 @@ input[type=email] {
  * Hide visually and from screen readers:
  */
 
+.type--margin-half {
+  margin-bottom: $spacing--half;
+}
+
 .type--margin-full {
   margin-bottom: $spacing;
 }
@@ -551,10 +557,6 @@ input[type=email] {
 
 .type--no-margin {
   margin-bottom: 0;
-}
-
-.type--margin-half {
-  margin-bottom: 1.5em;
 }
 
 .type--underlined {
