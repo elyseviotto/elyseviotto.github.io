@@ -108,6 +108,9 @@ html {
   background-color: $brand--primary;
 }
 
+html,
+body { overflow-x: hidden; }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -261,8 +264,9 @@ address {
 .nav {
   position: fixed;
   height: 30px;
+  padding-top: 5px;
   width: calc(100% - ( #{$spacing} * 2 ));
-  z-index: 9999;
+  z-index: 100;
 }
 
 .card {
@@ -396,11 +400,21 @@ footer {
   top: 0;
 }
 
+.parallax-container {
+  opacity: 0;
+  transition: opacity .5s linear;
+
+  &.parallax-container--active {
+    opacity: 1;
+  }
+}
+
 .hero__container {
   position: relative;
   height: auto;
   width: 100%;
   padding-top: 100%;
+
 }
 
 .hero {
@@ -588,6 +602,78 @@ input[type=email] {
 
 .display--block {
   display: block;
+}
+
+/* Side Nav */
+
+.menu-trigger {
+  background-image: url(../assets/img/icon--menu.png);
+  background-size: 50%;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: $spacing;
+  left: $spacing;
+  display: block;
+  width: 40px;
+  height: 40px;
+  z-index: 150;
+  text-decoration: none;
+  border: 0 none;
+}
+
+.close-menu-trigger {
+  background-image: url(../assets/img/icon--close.png);
+  background-size: 50%;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: $spacing;
+  right: $spacing;
+  display: block;
+  width: 40px;
+  height: 40px;
+  z-index: 150;
+  text-decoration: none;
+  border: 0 none;
+}
+
+.side-navigation {
+  background: $color;
+  color: #fff;
+  position: fixed;
+  padding: $spacing + $spacing--half;
+  height: 100%;
+  width: 300px;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  -webkit-transition: -webkit-transform .15s linear;
+          transition: transform .15s linear;
+
+  &.side-navigation--active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+
+    li {
+      padding-top: $spacing;
+    }
+  }
+
+  a {
+    color: $color--inverted--light;
+  }
+  a:hover {
+    color: $color--inverted;
+  }
 }
 
 /*
