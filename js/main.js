@@ -136,6 +136,23 @@ $(document).ready(function(){
           twitter: 'emanuel_cohen'
         },
         {
+          name: 'Vanda Daftari',
+          img: 'vanda-daftari.jpg',
+          titleFr: 'Directrice de la création',
+          titleEn: 'Creative director',
+          bioFr: '',
+          bioEn: '',
+          workplace: 'Breather',
+          workUrl: 'http://www.breather.com',
+          behance: 'v-a-n-d-a',
+          dribbble: '',
+          facebook: '',
+          instagram: '',
+          linkedin: '',
+          portfolio: '',
+          twitter: ''
+        },
+        {
           name: 'Sylvain Dumais',
           img: 'sylvain-dumais.jpg',
           titleFr: 'Réalisateur multimédia',
