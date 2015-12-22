@@ -109,7 +109,7 @@ $(document).ready(function(){
           bioFr: 'À la suite de ses études en design graphique à l’UQAM et à la HEAD Genève, Sebastien a immédiatement entamé la création de son propre studio de création, Pusher. Le studio, qui aura son lancement officiel en 2016, focalise sur le design identitaire, la direction artistique ainsi que le motion design.',
           bioEn: '',
           workplace: 'Pusher Studio',
-          workUrl: '',
+          workUrl: '//www.pusherstudio.com/',
           behance: '',
           dribbble: '',
           facebook: 'pusherstudio',
@@ -117,6 +117,23 @@ $(document).ready(function(){
           linkedin: '',
           portfolio: '',
           twitter: ''
+        },
+        {
+          name: 'Emanuel Cohen',
+          img: 'emanuel-cohen.jpg',
+          titleFr: 'Directeur de la création',
+          titleEn: 'Creative Director',
+          bioFr: '',
+          bioEn: '',
+          workplace: '26 Lettres',
+          workUrl: '//www.26lettres.com/',
+          behance: 'emanuelcohen',
+          dribbble: '',
+          facebook: '',
+          instagram: 'emanuelcohen',
+          linkedin: '',
+          portfolio: '',
+          twitter: 'emanuel_cohen'
         },
         {
           name: 'Sylvain Dumais',
