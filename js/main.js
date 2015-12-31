@@ -71,7 +71,7 @@ $(document).ready(function(){
           name: 'Julie Babin',
           img: 'julie-babin.jpg',
           titleFr: 'Directrice artistique Web',
-          titleEn: 'Web Artistic Director',
+          titleEn: 'Web Art Director',
           bioFr: 'Elle croit que la bonne création est utile, originale, efficace et surprenante. Une réalisation remarquable atteint ses objectifs tout en faisant vivre une expérience  agréable à l\'utilisateur.',
           bioEn: '',
           workplace: 'Agence Über',
