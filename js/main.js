@@ -68,6 +68,23 @@ $(document).ready(function(){
           twitter: ''
         },
         {
+          name: 'Julie Babin',
+          img: 'julie-babin.jpg',
+          titleFr: 'Directrice artistique Web',
+          titleEn: 'Web Artistic Director',
+          bioFr: 'Elle croit que la bonne création est utile, originale, efficace et surprenante. Une réalisation remarquable atteint ses objectifs tout en faisant vivre une expérience  agréable à l\'utilisateur.',
+          bioEn: '',
+          workplace: 'Agence Über',
+          workUrl: '//www.agenceuber.com',
+          behance: 'jub',
+          dribbble: '',
+          facebook: '',
+          instagram: '',
+          linkedin: 'https://ca.linkedin.com/in/juliebabin',
+          portfolio: '',
+          twitter: 'jub'
+        },
+        {
           name: 'Nicolas Baldovini',
           img: 'nicolas-baldovini.jpg',
           titleFr: 'UX lead',
