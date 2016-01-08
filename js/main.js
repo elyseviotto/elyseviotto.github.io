@@ -255,23 +255,6 @@ $(document).ready(function(){
           twitter: ''
         },
         {
-          name: 'Alex Nemeroff',
-          img: 'alex-nemeroff.jpg',
-          titleFr: 'Chef design et UX',
-          titleEn: 'Head of Design & UX',
-          bioFr: '',
-          bioEn: 'Alex co-founded Dynamo; he heads up Design and UX for clients like Blue Bottle Coffee, OMsignal, Airware and more.',
-          workplace: 'Dynamo',
-          workUrl: '//www.godynamo.com',
-          behance: '',
-          dribbble: '',
-          facebook: '',
-          instagram: '',
-          linkedin: '',
-          portfolio: '',
-          twitter: 'nemy'
-        },
-        {
           name: 'Serena Ngai',
           img: 'serena-ngai.jpg',
           titleFr: 'Design lead',
@@ -287,6 +270,23 @@ $(document).ready(function(){
           linkedin: '',
           portfolio: '',
           twitter: 'serenangai'
+        },
+        {
+          name: 'Allegra Poschmann',
+          img: 'allegra-poschmann.jpg',
+          titleFr: 'Directrice artistique',
+          titleEn: 'Art Director',
+          bioFr: '',
+          bioEn: 'Allegra is an award-winning art director who has experience working in various fields of communication with a special focus on brand design. Her work has been featured by Paste Magazine, Brand New, InVision, Type Together, Los Logos 7, Branding Served & many more. She currently works at Dynamo.',
+          workplace: 'Dynamo',
+          workUrl: '//www.godynamo.com',
+          behance: 'wearebooth',
+          dribbble: 'booth',
+          facebook: '',
+          instagram: '',
+          linkedin: '',
+          portfolio: '//www.wearebooth.com/',
+          twitter: ''
         },
         {
           name: 'Jean-François Poulin',
