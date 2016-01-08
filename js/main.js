@@ -161,12 +161,12 @@ $(document).ready(function(){
           bioEn: '',
           workplace: 'Breather',
           workUrl: '//www.breather.com',
-          behance: 'v-a-n-d-a',
+          behance: '',
           dribbble: '',
           facebook: '',
           instagram: '',
           linkedin: '',
-          portfolio: '',
+          portfolio: '//v-a-n-d-a.tumblr.com/',
           twitter: ''
         },
         {
